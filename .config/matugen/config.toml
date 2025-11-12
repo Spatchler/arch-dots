@@ -1,1 +1,52 @@
-.config/matugen/config.toml
+[config.wallpaper]
+set = false
+command = "/home/josh/.config/scripts/setWallpaper.sh"
+# command = "swww"
+# arguments = ["img", "--transition-type", "center", "--transition-step", "15", "--transition-fps", "60"]
+
+[templates.hyprland]
+input_path = '~/.config/matugen/templates/hyprland-colors.conf'
+output_path = '~/.config/hypr/colors.conf'
+post_hook = 'hyprctl reload'
+
+[templates.kitty]
+input_path = '~/.config/matugen/templates/kitty-colors.conf'
+output_path = '~/.config/kitty/themes/theme.conf'
+post_hook = "kitten themes --reload-in=all theme"
+
+[templates.alacritty]
+input_path = '~/.config/matugen/templates/alacritty.toml'
+output_path = '~/.config/alacritty/colors.toml'
+
+[templates.fuzzel]
+input_path = '~/.config/matugen/templates/fuzzel.ini'
+output_path = '~/.config/fuzzel/fuzzel.ini'
+
+[templates.rofi]
+input_path = '~/.config/matugen/templates/rofi-colors.rasi'
+output_path = '~/.config/rofi/colors/matugen.rasi'
+post_hook = '~/.config/rofi/updateRandomThumbnailBackground.sh'
+
+# [templates.gtk3]
+# input_path = '~/.config/matugen/templates/colors.css'
+# output_path = '~/.config/gtk-3.0/colors.css'
+# post_hook = 'gsettings set org.gnome.desktop.interface gtk-theme ""; gsettings set org.gnome.desktop.interface gtk-theme adw-gtk3-{{mode}}'
+
+# [templates.gtk4]
+# input_path = '~/.config/matugen/templates/colors.css'
+# output_path = '~/.config/gtk-4.0/colors.css'
+
+# [templates.dunst]
+# input_path = '~/.config/matugen/templates/dunstrc-colors'
+# output_path = '~/.config/dunst/dunstrc'
+# post_hook = 'dunstctl reload'
+
+[templates.waybar]
+input_path = '~/.config/matugen/templates/colors.css'
+output_path = '~/.config/waybar/colors.css'
+post_hook = "~/.config/waybar/scripts/launch.sh ; swaync-client -rs"
+
+[templates.helix]
+input_path = '~/.config/matugen/templates/helix.toml'
+output_path = '~/.config/helix/themes/matugen.toml'
+

@@ -1,1 +1,3 @@
-.config/scripts/network-status.sh
+#!/bin/bash
+
+

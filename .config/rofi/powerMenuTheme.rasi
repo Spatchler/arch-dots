@@ -1,1 +1,69 @@
-.config/rofi/powerMenuTheme.rasi
+configuration {
+    location:                       0;
+    font:                           "Font Awesome 30:style=regular";
+
+}
+
+@import                          "shared/colors.rasi"
+
+* {
+  border: 0;
+  margin: 0;
+  padding: 0;
+  spacing: 0;
+  line: #44475a;
+  background-color: @background;
+  text-color: @selected;
+}
+
+window {
+    background-color:               @background;
+    border:                         2px;
+    border-color:                   @line;
+    border-radius:                  50px;
+    width:                          465px;
+    height:                         130px;
+    x-offset:                       -4;
+    y-offset:                       0;
+}
+ 
+listview {
+    background-color:               @background;
+    columns:                        1;
+    lines:                          5;
+    spacing:                        50px;
+    layout:                         horizontal;
+}
+ 
+mainbox {
+    background-color:               @background;
+    children:                       [ listview ];
+    padding:                        40px;
+}
+ 
+element {
+    background-color:               @background;
+    text-color:                     @line;
+    orientation:                    horizontal;
+    /*border-radius:                  100%;*/
+    /*padding:                        8px 32px 8px 32px;*/
+}
+ 
+element-text {
+    background-color:               inherit;
+    text-color:                     inherit;
+    font:                           "Font Awesome 30";
+    expand:                         false;
+    horizontal-align:               0.5;
+    vertical-align:                 0.5;
+    margin:                         0px;
+}
+ 
+element selected {
+    background-color:               @background;
+    text-color:                     @selected;
+    border:                         0px;
+    /*border-radius:                  100%;*/
+    border-color:                   @selected;
+}
+

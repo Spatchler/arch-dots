@@ -1,1 +1,22 @@
-.config/helix/languages.toml
+[[language]]
+name = "__common__"
+scope = "source.__common__"
+file-types = []
+language-servers = [ "colors" ]
+
+[[language]]
+name = "css"
+scope = "source.css"
+file-types = [ "css" ]
+language-servers = [ "colors" ]
+
+[[language]]
+name = "toml"
+scope = "source.toml"
+file-types = [ "toml" ]
+language-servers = [ "colors" ]
+
+[language-server.colors]
+command = "uwu_colors"
+args = [ "--named-completions-mode", "full" ]
+

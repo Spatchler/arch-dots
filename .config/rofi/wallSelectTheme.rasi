@@ -1,1 +1,93 @@
-.config/rofi/wallSelectTheme.rasi
+// https://github.com/gh0stzk/dotfiles
+
+configuration {
+    modi:                        "drun";
+    show-icons:                  true;
+    drun-display-format:         "{name}";
+}
+
+@import "shared/colors.rasi"
+
+* {
+    font: "JetBrainsMono NF Bold 9";
+    line: #44475a;
+}
+
+window {
+    enabled:                     true;
+    fullscreen:                  false;
+    width:                       60%;
+    transparency:                "real";
+    cursor:                      "default";
+    spacing:                     0px;
+    padding:                     0px;
+    border:                      2px;
+    border-radius:               50px;
+    border-color:                @line;
+    background-color:            transparent;
+}
+
+mainbox {
+    enabled:                     true;
+    children:                    [ "listview" ];
+    background-color:            @background;
+}
+
+listview {
+    enabled:                     true;
+    columns:                     4;
+    lines:                       2;
+    spacing:                     30px;
+    padding:                     20px 30px;
+    cycle:                       true;
+    dynamic:                     false;
+    scrollbar:                   false;
+    layout:                      vertical;
+    reverse:                     false;
+    fixed-height:                true;
+    fixed-columns:               true;
+    cursor:                      "default";
+    background-color:            transparent;
+    text-color:                  @foreground;
+}
+
+element {
+    enabled:                     true;
+    orientation:                 vertical;
+    spacing:                     0px;
+    padding:                     3px;
+    border-radius:               50px;
+    cursor:                      pointer;
+    background-color:            transparent;
+    text-color:                  @foreground;
+}
+
+@media(max-aspect-ratio: 1.8) {
+    element {
+        orientation:             vertical;
+    }
+}
+
+element selected.normal {
+    background-color:            @selected;
+    text-color:                  @background;
+}
+
+element-icon {
+    size:                        25%;
+	border-radius:				 50px;
+    cursor:                      inherit;
+    background-color:            transparent;
+    text-color:                  inherit;
+}
+
+element-text {
+    enabled: false;
+    vertical-align:              0.5;
+    horizontal-align:            0.5;
+    padding:                     10px 0px 8px 0px;
+    cursor:                      inherit;
+    background-color:            transparent;
+    text-color:                  inherit;
+}
+
